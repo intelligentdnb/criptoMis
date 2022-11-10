@@ -17,7 +17,7 @@ const UserRankingItem = (props: UserRankingItemProps) => {
     return (
         <View style={styles.root}>
             <View style={styles.left} >
-                <Text>{place}</Text>
+                <Text style={styles.place} >{place}</Text>
                 <Image style={styles.image} source={{ uri: image }} />
                 <View>
                     <Text style={styles.name}>{name}</Text>
