@@ -31,6 +31,10 @@ export const styles = StyleSheet.create({
     },
     symbol: {
         color: "#6b6b6b"
-    }
+    },
+    place: {
+        fontSize: 18,
+        width: 20,
+    },
 });
 
