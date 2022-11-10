@@ -2,10 +2,8 @@ import React from "react";
 import { View, Text, Image, FlatList } from "react-native";
 import PortfolioCoin from "../../components/PortfolioCoin";
 import styles from "./styles";
-const image = require("../../assets/images/Saly-10.png");
-const btcIMG = require("../.././src/imagesEJ/btc.png");
-const ethIMG = require("../.././src/imagesEJ/eth.png");
-const usdtIMG = require("../.././src/imagesEJ/usdt.png");
+const image = require("../../../assets/images/Saly-10.png");
+
 
 
 const portfolioCoins = [{

@@ -4,10 +4,10 @@ import * as React from 'react';
 import { ColorSchemeName } from 'react-native';
 
 import NotFoundScreen from '../screens/NotFoundScreen';
-import { RootStackParamList } from '../types';
+import { RootStackParamList } from '../../types';
 import BottomTabNavigator from './BottomTabNavigator';
 import LinkingConfiguration from './LinkingConfiguration';
-//import CoinDetailsScreen from "../screens/CoinDetailsScreen";
+import CoinDetailsScreen from '../screens/CoinDetailsScreen';
 //import CoinExchangeScreen from "../screens/CoinExchangeScreen";
 //import WelcomeScreen from "../screens/WelcomeScreen";
 
@@ -29,7 +29,23 @@ const Stack = createStackNavigator<RootStackParamList>();
 
 function RootNavigator() {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator >
+      <Stack.Screen
+        name="CoinDetails"
+        component={CoinDetailsScreen}
+        options={{
+          title: "Price Data",
+        }}
+      /> 
+      <Stack.Screen
+        name="Root"
+        component={BottomTabNavigator}
+        options={{ headerShown: false }}
+      />
+
+      {/*
+      
+
       <Stack.Screen
         name="Welcome"
         component={BottomTabNavigator}
@@ -37,21 +53,8 @@ function RootNavigator() {
           headerShown: false
         }}
       />
+
       <Stack.Screen
-        name="Root"
-        component={BottomTabNavigator}
-        options={{
-          headerShown: false
-        }}
-      />
-      {/* <Stack.Screen
-        name="CoinDetails"
-       // component={CoinDetailsScreen}
-        options={{
-          title: "Price Data",
-        }}
-      /> */}
-      {/* <Stack.Screen
         name="CoinExchange"
        // component={CoinExchangeScreen}
         options={{

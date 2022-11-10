@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, Image, FlatList } from "react-native";
 import styles from "./styles";
-const image = require("../../assets/images/Saly-20.png");
+const image = require("../../../assets/images/Saly-20.png");
 import UserRankingItem from "../../components/UserRankingItem";
 
 const portfolioCoins = [{
