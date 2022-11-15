@@ -1,8 +1,10 @@
 import React from 'react';
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, Pressable } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import {styles} from "./styles";
+import PercentageChange from '../PercentageChange';
 
-export interface MarketCoinProps {
+export interface PortfolioCoinProps {
     marketCoin: {
         image: string,
         name: string,
@@ -10,13 +12,17 @@ export interface MarketCoinProps {
         valueChange24H: number,
         valueUSD?: number
     }
-}
+};
 
-const MarketCoin = (props: MarketCoinProps) => {
+const MarketCoin = (props: PortfolioCoinProps) => {
     const { marketCoin: { image, name, symbol, valueChange24H, valueUSD } } = props;
 
+    const navigation = useNavigation();
+
+    let spy = "CoinDetails" as never;
+
     return (
-        <View style={styles.root}>
+        <Pressable style={styles.root} onPress={() => navigation.navigate(spy)}>
             <View style={styles.left} >
                 <Image style={styles.image} source={{ uri: image }} />
                 <View>
@@ -26,11 +32,9 @@ const MarketCoin = (props: MarketCoinProps) => {
             </View>
             <View style={{alignItems: "flex-end"}} >
                 <Text style={styles.name}>${valueUSD} </Text>
-                <Text style={{color: valueChange24H > 0 ? "#3a8c10" : "#f10000"}}>
-                    {valueChange24H > 0 && "+"} {valueChange24H}
-                </Text>
+                <PercentageChange value={valueChange24H}/>
             </View>
-        </View>
+        </Pressable>
     );
 };
 

@@ -31,16 +31,17 @@ function RootNavigator() {
   return (
     <Stack.Navigator >
       <Stack.Screen
+        name="Root"
+        component={BottomTabNavigator}
+        options={{ headerShown: false }}
+      />
+
+      <Stack.Screen
         name="CoinDetails"
         component={CoinDetailsScreen}
         options={{
           title: "Price Data",
         }}
-      /> 
-      <Stack.Screen
-        name="Root"
-        component={BottomTabNavigator}
-        options={{ headerShown: false }}
       />
 
       {/*
