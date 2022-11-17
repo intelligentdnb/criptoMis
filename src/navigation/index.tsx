@@ -31,13 +31,6 @@ function RootNavigator() {
   return (
     <Stack.Navigator >
       <Stack.Screen
-        name="CoinExchange"
-        component={CoinExchangeScreen}
-        options={{
-          title: "Coin Exchange",
-        }}
-      />
-      <Stack.Screen
         name="Root"
         component={BottomTabNavigator}
         options={{ headerShown: false }}
@@ -50,7 +43,13 @@ function RootNavigator() {
           title: "Price Data",
         }}
       />
-
+      <Stack.Screen
+        name="CoinExchange"
+        component={CoinExchangeScreen}
+        options={{
+          title: "Coin Exchange",
+        }}
+      />
       {/*
       
 

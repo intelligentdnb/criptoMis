@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { View, Text, Image, Pressable } from 'react-native'
+import { useNavigation } from "@react-navigation/native";
 import styles from './style';
 import { AntDesign } from '@expo/vector-icons';
 
@@ -193,12 +194,17 @@ const CoinDetailsScreen = () => {
     amount: 2,
   });
 
-  const onBuy = () => {
+  const navigation = useNavigation();
 
+  const spyEx = "CoinExchange" as never 
+  
+
+  const onBuy = () => {
+    navigation.navigate(spyEx, {isBuy: true, coinData} as never)
   };
 
   const onSell = () => {
-
+    navigation.navigate(spyEx, {isBuy: false, coinData} as never)
   };
 
   return (
