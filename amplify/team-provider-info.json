@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-cryptomis-dev-162742-authRole",
+      "UnauthRoleArn": "arn:aws:iam::533266867746:role/amplify-cryptomis-dev-162742-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::533266867746:role/amplify-cryptomis-dev-162742-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-cryptomis-dev-162742-deployment",
+      "UnauthRoleName": "amplify-cryptomis-dev-162742-unauthRole",
+      "StackName": "amplify-cryptomis-dev-162742",
+      "StackId": "arn:aws:cloudformation:us-east-1:533266867746:stack/amplify-cryptomis-dev-162742/ea1196b0-66ad-11ed-a979-0eb7685d618f",
+      "AmplifyAppId": "d22tz3j88xjeju"
+    }
+  }
+}
